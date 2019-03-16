@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Programming 섹션입니다. | Programming note</title>
+    <meta name="description" content="Programming 설명을 합니다.">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.522bbaf6.css" as="style"><link rel="preload" href="/assets/js/app.b3d3b69c.js" as="script"><link rel="preload" href="/assets/js/10.5966ec56.js" as="script"><link rel="prefetch" href="/assets/js/11.c54bdadf.js"><link rel="prefetch" href="/assets/js/12.807b82b1.js"><link rel="prefetch" href="/assets/js/2.328b366e.js"><link rel="prefetch" href="/assets/js/3.240b6f4e.js"><link rel="prefetch" href="/assets/js/4.3814f39d.js"><link rel="prefetch" href="/assets/js/5.e57eb20b.js"><link rel="prefetch" href="/assets/js/6.3c45a050.js"><link rel="prefetch" href="/assets/js/7.0a9130a4.js"><link rel="prefetch" href="/assets/js/8.200952da.js"><link rel="prefetch" href="/assets/js/9.e34d4cc2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.522bbaf6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Programming note</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/blog/" class="nav-link">Blog</a></div><div class="nav-item"><a href="/programming/" class="nav-link router-link-active">Programming</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/blog/" class="nav-link">Blog</a></div><div class="nav-item"><a href="/programming/" class="nav-link router-link-active">Programming</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">vuepress 빠르게 시작하기</a></li><li><a href="/blog/" class="sidebar-link">Blog</a></li><li><a href="/programming/" class="sidebar-link">Programming</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="programming-tip을-올릴-것입니다"><a href="#programming-tip을-올릴-것입니다" aria-hidden="true" class="header-anchor">#</a> Programming tip을 올릴 것입니다.</h1> <p>그 전에 파일을 읽어와서 markdown내에 소스로 치환해주는 기능을 사용해본다.</p> <p>사용법:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;&lt;&lt; @/filepath{highlightLines} 
+
+ex:
+&lt;&lt;&lt; @/source/fn.c{3,8}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-c line-numbers-mode"><div class="highlight-lines"><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><pre class="language-c"><code><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token comment">// void를 리턴받고 파라메터는 char*형인 함수형포인터</span>
+<span class="token keyword">typedef</span> <span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>func<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%s-&gt;%s\n&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;f1입니다&quot;</span><span class="token punctuation">,</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">f2</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%s-&gt;%s\n&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;f2입니다&quot;</span><span class="token punctuation">,</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">f3</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%s-&gt;%s\n&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;f3입니다&quot;</span><span class="token punctuation">,</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token keyword">int</span> FUNCTIONONE   <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> FUNCTIONTWO   <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> FUNCTIONTHREE <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+func  fArray<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>f1<span class="token punctuation">,</span> f2<span class="token punctuation">,</span> f3<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fArray<span class="token punctuation">[</span>FUNCTIONTWO<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token string">&quot;일반적으로 이렇게 사용합니다.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/app.b3d3b69c.js" defer></script><script src="/assets/js/10.5966ec56.js" defer></script>
+  </body>
+</html>
