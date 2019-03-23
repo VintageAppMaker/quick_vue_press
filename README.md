@@ -73,4 +73,12 @@
 
  - 반드시 프로젝트의 루트에서 **vuepress dev**를 실행 
  - 배포는 **vuepress build** 
+ - ./vuepress/config.js에서 base 값을 **배포하는 경로에 맞게 설정**  한다. 예로 / 밑에 /test에 저장한다면 base는 base : "/test/"가 되어야 한다. 처음과 끝에 /가 있음에 유의한다. 
+
+ ~~~
+    title       : 'Programming note',
+    description : '각종 프로그래밍을 빠르게 시작하기 위한 노트정리',
+	  base        : "/test/", 
+ ~~~
+
 

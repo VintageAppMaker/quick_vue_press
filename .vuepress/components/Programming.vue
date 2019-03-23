@@ -2,17 +2,25 @@
 
 <template>
 <div>
-    <div id = "card" v-for="post in posts">
-        <H1><router-link :to="post.path"> {{ post.frontmatter.title }} </router-link></h1>
-        <hr>
-        {{ post.frontmatter.description }}
+    <ol>
+        <li>
+            <div v-for="post in posts">
+            <h3><router-link :to="post.path"> {{ post.frontmatter.title }} </router-link></h3>
+            <p id = "card" >{{ post.frontmatter.description }}</p>
         <br>        
     </div>
+        </li>
+    </ol>
 </div>
 </template>
 
 <script>
 export default {
+    data (){
+        return {
+            count : 0
+        }
+    },
     computed: {
         posts() {
              return this.$site.pages
@@ -27,7 +35,6 @@ export default {
 
 #card {
     font-style: italic;
-    font-size : 18px; 
     color: #888888;
 }
 
